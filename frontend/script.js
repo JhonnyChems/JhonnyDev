@@ -1,4 +1,4 @@
-const backendUrl = 'https://sitio-axrjgzprg-jhonnychems-projects.vercel.app'
+const backendUrl = 'http://localhost:3000'
 
     const menuIcon = document.querySelector('#menu-icon');
     const navbar = document.querySelector('#navbar');

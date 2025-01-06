@@ -9,7 +9,7 @@ const app = express();
 
 // Configuración de CORS con origen específico
 const corsOptions = {
-    origin: 'https://sitio-web-1uos-r641qjju3-jhonnychems-projects.vercel.app',
+    origin: '',
     methods: 'GET,POST,OPTIONS',
     allowedHeaders: 'Content-Type',
 };
