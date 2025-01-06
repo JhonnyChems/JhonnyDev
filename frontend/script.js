@@ -1,4 +1,4 @@
-const backendUrl = 'https://backend-r3wxfxrtl-jhonnychems-projects.vercel.app'
+const backendUrl = 'https://jhonnychems-projects.vercel.app'
 
     const menuIcon = document.querySelector('#menu-icon');
     const navbar = document.querySelector('#navbar');

@@ -1,0 +1,23 @@
+{
+        "version": 2,
+        "builds": [
+        {
+            "src": "frontend/index.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "api/app.js",
+            "use": "@vercel/node"
+        }
+        ],
+        "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "frontend/$1"
+        },
+        {
+            "src": "/send-email",
+            "dest": "api/app.js"
+        }
+        ]
+}
