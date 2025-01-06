@@ -1,0 +1,6 @@
+#ignorar la carpeta node_modules
+/node_modules
+
+#ignorar archivo .env
+.env
+.vercel
