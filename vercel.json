@@ -2,7 +2,7 @@
         "version": 2,
         "builds": [
         {
-            "src": "frontend/index.html",
+            "src": "frontend/**",
             "use": "@vercel/static"
         },
         {
@@ -12,12 +12,12 @@
         ],
         "routes": [
         {
-            "src": "/(.*)",
-            "dest": "frontend/$1"
-        },
-        {
             "src": "/send-email",
             "dest": "api/app.js"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "frontend/$1"
         }
         ]
 }
