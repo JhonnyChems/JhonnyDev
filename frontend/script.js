@@ -1,4 +1,3 @@
-const backendUrl = 'https://jhonny-9z29t0gqv-jhonnychems-projects.vercel.app'
 
     const menuIcon = document.querySelector('#menu-icon');
     const navbar = document.querySelector('#navbar');
@@ -25,7 +24,7 @@ const backendUrl = 'https://jhonny-9z29t0gqv-jhonnychems-projects.vercel.app'
         console.log('datos que se envian al backend', params)
     
         try {
-            const response = await fetch(`${backendUrl}/send-email`, {
+            const response = await fetch('/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
