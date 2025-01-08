@@ -9,7 +9,14 @@ const app = express();
 
 // Configuración de CORS con origen específico
 const corsOptions = {
-    origin: 'https://jhonny-9z29t0gqv-jhonnychems-projects.vercel.app',
+    origin: (origin, callback) => {
+        if(!origin ||  /jhonnychems-projects\.vercel\.app$/.test(origin)){
+            callback(null, true)
+        }
+        else{
+            callback(new error('Cors not allowed'))
+        }
+    },
     methods: 'GET,POST,OPTIONS',
     allowedHeaders: 'Content-Type',
 };
