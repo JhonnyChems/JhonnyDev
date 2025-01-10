@@ -48,7 +48,6 @@
                     title: '¡Qué bien!',
                     text: res.mensaje,
                 });
-                $('#editProducto').modal('hide');
             }
         
         } catch (error) {
