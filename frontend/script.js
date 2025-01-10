@@ -31,13 +31,33 @@
                 },
                 body: JSON.stringify(params),
             });
-
-            console.log('respuesta del servidor', response)
-            await response.json();
-            alert("El correo se ha enviado de manera exitosa");
+        
+            
+            const res = await response.json();
+        
+            
+            if (res.state === false) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ouch',
+                    text: res.mensaje,
+                });
+            } else {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Qué bien!',
+                    text: res.mensaje,
+                });
+                $('#editProducto').modal('hide');
+            }
+        
         } catch (error) {
             console.error("Error al enviar el correo:", error);
-            alert("Error al enviar el correo. Por favor, inténtalo de nuevo.");
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Error al enviar el correo. Por favor, inténtalo de nuevo.',
+            });
         }
     });
     
