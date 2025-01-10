@@ -40,13 +40,13 @@
                 Swal.fire({
                     icon: 'error',
                     title: 'Ouch',
-                    text: res.mensaje,
+                    text: "Error al enviar el correo, por favor intente nuevamente",
                 });
             } else {
                 Swal.fire({
                     icon: 'success',
-                    title: '¡Qué bien!',
-                    text: res.mensaje,
+                    title: '¡Que bien!',
+                    text: "Mensaje enviado con exito, pronto nos comunicaremos contigo",
                 });
             }
         
