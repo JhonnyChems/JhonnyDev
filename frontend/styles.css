@@ -52,6 +52,7 @@ header{
 span{
     color:#00ff51;
 }
+
 .navbar a{
     font-size: 1.8rem;
     color:#ffff;
@@ -214,7 +215,7 @@ section{
     background: #080808;
 }
 
-.headding{
+.heading{
     text-align: center;
     font-size: 7rem;
     margin: 5rem 0;
@@ -263,6 +264,7 @@ section{
 .services-info i{
     font-size: 8rem;
 }
+
 .services-info h4{
     font-size: 4rem;
     margin: 2rem 0;
@@ -343,8 +345,6 @@ section{
     font-size: 1.5rem;
 }
 
-
-
 @media(max-width:1024px){
     #menu-icon{
         display: block;
@@ -406,9 +406,6 @@ section{
     .contact form{
         flex-direction: column;
     }
-
-    
-
 }
 
 .projects {
@@ -420,6 +417,10 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+}
+
+img.project-img{
+    max-height: 100%;
 }
 
 .project-box {

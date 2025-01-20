@@ -116,27 +116,31 @@
     <!-- Nueva sección: Projects -->
     <section class="projects" id="projects">
         <h2 class="heading">My Projects</h2>
-
+    
         <div class="projects-container">
             <div class="project-box">
+                <img src="./assets/ValhallaCoffe.png" alt="E-commerce de Café" class="project-img">
                 <h4>E-commerce de Café</h4>
                 <p>Un sitio de e-commerce para la venta de café, desarrollado con Angular, Node.js y Express, con una base de datos en MongoDB. Permite a los usuarios comprar productos, gestionar su carrito y realizar pagos de manera segura.</p>
-                <a href="https://github.com/JhonnyChems?tab=repositories" target="_blank" class="btn">View Code</a>
+                <a href="https://github.com/JhonnyChems/Valhalla-Coffe" target="_blank" class="btn">View Code</a>
             </div>
-
+    
             <div class="project-box">
+                <img src="./assets/ValidacionTarjeta.png" alt="Validación de Tarjeta en Python" class="project-img">
                 <h4>Validación de Tarjeta en Python</h4>
                 <p>Este proyecto consiste en un algoritmo desarrollado en Python para validar números de tarjetas de crédito utilizando el algoritmo de Luhn. Es una herramienta útil para verificar la validez de una tarjeta antes de procesar pagos.</p>
-                <a href="https://github.com/JhonnyChems/validacion-tarjeta-python" target="_blank" class="btn">View Code</a>
+                <a href="https://github.com/JhonnyChems/ValidacionTarjeta.py" target="_blank" class="btn">View Code</a>
             </div>
-
+    
             <div class="project-box">
+                <img src="./assets/JuegoDeRol.png" alt="Juego de Rol en JavaScript" class="project-img">
                 <h4>Juego de Rol en JavaScript</h4>
                 <p>Un pequeño juego de rol desarrollado en JavaScript. Sin gráficos, pero con funcionalidades clave como la compra de vida, adquisición de armas, y desplazarse a un lugar de lucha. Un juego basado en texto con interacciones dinámicas.</p>
-                <a href="https://github.com/JhonnyChems/juego-rol-js" target="_blank" class="btn">View Code</a>
+                <a href="https://github.com/JhonnyChems/GameJavascript" target="_blank" class="btn">View Code</a>
             </div>
         </div>
     </section>
+    
 
     <!-- Nueva sección: Skills -->
     <section class="skills" id="skills">
@@ -225,7 +229,7 @@
                     <input id="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input id="phone" placeholder="Phone Number">
+                    <input id="phone" placeholder="Phone Number" pattern="\d{10,}" required title="El numero de celular debe tener al menos 10 digitos">
                     <input id="subject" placeholder="Subject">
                 </div>
             </div>
