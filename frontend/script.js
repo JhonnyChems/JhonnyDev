@@ -92,4 +92,68 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
         });
     }
 });
+
+
+const skillBoxes = document.querySelectorAll('.skill-box');
+const container = document.querySelector('.skills-container');
+
+
+const boxSize = 120;
+
+
+function getRandomPosition() {
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+
     
+    const randomX = Math.random() * (containerWidth - boxSize); 
+    const randomY = Math.random() * (containerHeight - boxSize);
+
+    return { randomX, randomY };
+}
+
+
+function isOverlapping(box, newX, newY) {
+    const boxRect = box.getBoundingClientRect();
+
+    for (let otherBox of skillBoxes) {
+        if (otherBox !== box) {
+            const otherBoxRect = otherBox.getBoundingClientRect();
+            if (
+                newX < otherBoxRect.right &&
+                newX + boxRect.width > otherBoxRect.left &&
+                newY < otherBoxRect.bottom &&
+                newY + boxRect.height > otherBoxRect.top
+            ) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+
+function moveRandomly() {
+    skillBoxes.forEach((box) => {
+        let { randomX, randomY } = getRandomPosition();
+
+        
+        while (isOverlapping(box, randomX, randomY)) {
+            ({ randomX, randomY } = getRandomPosition());
+        }
+
+        
+        box.style.left = `${randomX}px`;
+        box.style.top = `${randomY}px`;
+    });
+}
+
+
+skillBoxes.forEach((box) => {
+    let { randomX, randomY } = getRandomPosition();
+    box.style.left = `${randomX}px`;
+    box.style.top = `${randomY}px`;
+});
+
+
+setInterval(moveRandomly, 2000);

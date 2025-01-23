@@ -454,30 +454,63 @@ img.project-img{
 .skills {
     background-color: #080808;
     padding: 10rem 12%;
-}
-
-h2.heading {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
 }
 
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .skill-box {
+    position: absolute;
     background-color: #00ff51;
     padding: 2rem;
     border-radius: 1rem;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 120px; 
+    height: 120px; 
 }
 
-.skill-box h4 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #080808;
+.skill-box i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.skill-box:hover {
+    transform: scale(1.1);
+    background-color: #080808;
+    color: #00ff51;
+}
+
+/*animación solo para el movimiento dinámico de las cajas */
+@keyframes moveRandomly {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, 50px);
+    }
+    50% {
+        transform: translate(-100px, 70px);
+    }
+    75% {
+        transform: translate(50px, -50px);
+    }
+    100% {
+        transform: translate(-50px, -100px);
+    }
 }
 
 .progress-bar {
